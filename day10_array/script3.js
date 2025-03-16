@@ -161,3 +161,34 @@ const myname = "Gourab Talukdar";
 // };
 // name.reverse();
 // console.log(name); //(4) ['sudipta', 'rahul', 'gourab', 'arpi', reverse: ƒ]
+
+// // ########### shift ############
+
+// name.shift = () => {
+//   if (arr.length === 0) {
+//     return arr;
+//   }
+
+//   const shiftValue = arr[0];
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     arr[i] = arr[i + 1];
+//   }
+//   arr.length--;
+//   return shiftValue;
+// };
+
+// console.log(arr.shift()); // arpi
+// console.log(arr); //(3) ['gourab', 'rahul', 'sudipta']
+
+// // ########### join ############
+
+arr.join = (separator = ",") => {
+  let str = "";
+  for (let i = 0; i < arr.length; i++) {
+    str = str + arr[i] + separator;
+  }
+
+  return str.slice(0, str.length - 1);
+};
+
+console.log(arr.join("_"));
