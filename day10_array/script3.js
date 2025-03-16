@@ -1,4 +1,4 @@
-const arr = [1, 2, 3, 4, 5];
+const arr = [1, 2, 3];
 const name = ["arpi", "gourab", "rahul", "sudipta"];
 const myname = "Gourab Talukdar";
 
@@ -101,3 +101,63 @@ const myname = "Gourab Talukdar";
 
 // console.log(name.push("Bhramar")); // 5
 // console.log(name); // (5) ['arpi', 'gourab', 'rahul', 'sudipta', 'Bhramar', push: ƒ]
+
+// ########### indexOf ############
+
+//------way 1
+
+// function myIndexOf(value) {
+//   for (let i = 0; i < name.length; i++) {
+//     if (name[i] === value) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// }
+
+// name.indexOf = myIndexOf;
+// console.log(name.indexOf("sudipta")); // 3
+
+//------way 2
+
+// name.indexOf = (value) => {
+//   for (let i = 0; i < name.length; i++) {
+//     if (name[i] === value) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// };
+
+// console.log(name.indexOf("sudipta")); // 3
+
+// ########### concat ############
+
+// arr.concat = (...newArr) => {
+//   let resultArr = [...arr];
+//   for (let i = 0; i < newArr.length; i++) {
+//     if (Array.isArray(newArr[i])) {
+//       //typeof newArr[i] === "object"
+//       resultArr = [...resultArr, ...newArr[i]];
+//     } else {
+//       resultArr.push(newArr[i]);
+//     }
+//   }
+//   return resultArr;
+// };
+
+// console.log(arr.concat(7, 8, 9));
+// console.log(arr.concat([7, 8, 9], 5, 6, [[10, 11]]));
+// console.log(arr.concat(7, 8, [9], { a: "hello" }));
+
+// ########### reverse ############
+
+// name.reverse = () => {
+//   const reverseName = [...name];
+//   const len = name.length;
+//   for (let i = 0; i < len; i++) {
+//     name[len - i - 1] = reverseName[i];
+//   }
+// };
+// name.reverse();
+// console.log(name); //(4) ['sudipta', 'rahul', 'gourab', 'arpi', reverse: ƒ]
