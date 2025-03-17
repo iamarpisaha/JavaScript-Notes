@@ -11,10 +11,11 @@ let num = [2, 3, 4, 5, 6];
 //   }
 // };
 
-// arr.forEach((item) => {
-//   console.log(item);
+// arr.forEach((item, index, x) => {
+//   console.log(item, index, x);
 // });
 
+// arr.forEach(console.log);
 // ### map
 
 // const x = [];
@@ -22,6 +23,7 @@ let num = [2, 3, 4, 5, 6];
 // num.forEach((item) => {
 //   x.push(item * 3);
 // });
+// console.log(x);
 
 // const y = num.map((item) => {
 //   return item * 3;
@@ -31,12 +33,9 @@ let num = [2, 3, 4, 5, 6];
 // const z = num.map((item) => item * 3);
 // console.log(z); // [6, 9, 12, 15, 18];
 
-// console.log(x);
-
-// console.log(z);
-
 // ### every
 
+//##### way 1
 // const x = num.every((item) => {
 //   console.log(item);
 //   if (item % 2 === 0) {
@@ -45,12 +44,13 @@ let num = [2, 3, 4, 5, 6];
 //   return false;
 // });
 
+//##### way 2
 // const x = num.every((item) => item % 2 === 0);
-
-// console.log(x);
+// console.log(x); //false
 
 // ### some
 
+//##### way 1
 // const x = num.some((item) => {
 //   console.log(item);
 //   if (item % 2 === 0) {
@@ -58,9 +58,10 @@ let num = [2, 3, 4, 5, 6];
 //   }
 //   return false;
 // });
+// console.log(x);
 
+//##### way 2
 // const x = num.some((item) => item % 2 === 0);
-
 // console.log(x);
 
 // ### find
@@ -97,6 +98,13 @@ const students = [
 
 // console.log(x);
 
+//### findLast
+// const x = students.findLast((item) => {
+//   return item.name === "xyz";
+// });
+
+// console.log(x);
+
 // ### findIndex
 
 // const x = students.findIndex((item) => {
@@ -104,6 +112,14 @@ const students = [
 // });
 
 // console.log(x);
+
+// ### findLastIndex
+
+// const x = students.findLastIndex((item) => {
+//   return item.name === "xyz";
+// });
+
+// console.log(x); //5
 
 // ### filter
 
