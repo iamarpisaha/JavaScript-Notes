@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posts List</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="p-6">
+    <h1 class="text-center text-2xl mb-4">Posts List</h1>
+
+    <form class="max-w-sm mx-auto" id="post-add-form">
+      <input
+        type="text"
+        id="userId"
+        name="userId"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5"
+        placeholder="name@flowbite.com"
+        required
+      />
+
+      <input
+        type="text"
+        id="title"
+        name="title"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5"
+        required
+      />
+
+      <input
+        type="text"
+        id="content"
+        name="content"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5"
+        required
+      />
+
+      <button
+        type="submit"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        Submit
+      </button>
+    </form>
+
+    <!-- //table start  -->
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table
+        class="w-full text-sm text-left rtl:text-right text-gray-500"
+        id="posts-table"
+      >
+        <thead class="text-xs text-white uppercase bg-gray-800">
+          <tr>
+            <th scope="col" class="px-6 py-3">User ID</th>
+            <th scope="col" class="px-6 py-3">Post ID</th>
+            <th scope="col" class="px-6 py-3">Title</th>
+            <th scope="col" class="px-6 py-3">Content</th>
+            <th scope="col" class="px-6 py-3">Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </body>
+</html>
